@@ -1,8 +1,0 @@
-[
-null,
-{"id":1,"expanded":true,"name":"开场白","order":1,"parentId":0,"scrollX":1393,"scrollY":884,"quick":false},
-{"id":2,"expanded":true,"name":"空中神殿","order":5,"parentId":0,"scrollX":1409,"scrollY":1396,"quick":false},
-{"id":3,"expanded":true,"name":"遗迹","order":3,"parentId":0,"scrollX":1393,"scrollY":884,"quick":false},
-{"id":4,"expanded":true,"name":"沼泽","order":2,"parentId":0,"scrollX":832,"scrollY":704,"quick":false},
-{"id":5,"expanded":false,"name":"遗迹内部","order":4,"parentId":0,"scrollX":1393,"scrollY":884,"quick":false}
-]
