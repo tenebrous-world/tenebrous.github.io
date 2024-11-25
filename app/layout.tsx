@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <head>
-        <script src="https://hm.baidu.com/hm.js?fb4851a0837db710035e1b9f3f226f2a"></script>
+        <Script
+          src="https://hm.baidu.com/hm.js?fb4851a0837db710035e1b9f3f226f2a"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
