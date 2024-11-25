@@ -36,27 +36,38 @@ export default function HomePage() {
     }
   }, [emblaApi]); // Dependency array ensures effect runs when emblaApi changes
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* 背景动画 */}
       <div className="fixed inset-0 z-0">
         <Stars className="w-full h-full text-gray-700 animate-pulse" />
       </div>
 
       {/* 导航栏 */}
-      <nav className="container mx-auto p-4 relative z-10">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">黑域游戏工作室</h1>
-          <div className="space-x-4">
-            <Button variant="link">
-              <Mail className="ml-2 h-4 w-4" />
-              netufo@hotmail.com
-            </Button>
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black/80">
+        <div className="container mx-auto p-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/images/logo.png"
+                alt="黑域游戏工作室 Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+              <h1 className="text-2xl font-bold">黑域游戏工作室</h1>
+            </div>
+            <div className="space-x-4">
+              <Button variant="link">
+                <Mail className="ml-2 h-4 w-4" />
+                netufo@hotmail.com
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* 英雄区域 */}
-      <section className="container mx-auto py-20 text-center relative z-10">
+      <section className="container mx-auto py-20 text-center relative z-10 mt-16">
         <h2 className="text-6xl font-bold mb-4 animate-fade-in-up">
           欢迎来到黑域
         </h2>
@@ -160,7 +171,7 @@ export default function HomePage() {
                 <li>感人至深的剧情发展</li>
               </ul>
               <Link href="/etudes01" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="animate-pulse">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold animate-breathing transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-orange-400/50 rounded-full px-8">
                   开始游戏
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
