@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   description: '专注打造精品 RPG 游戏体验',
 }
 
+// Baidu Analytics initialization
+const baiduAnalytics = `
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fb4851a0837db710035e1b9f3f226f2a";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: {
@@ -19,8 +30,9 @@ export default function RootLayout({
     <html lang="zh">
       <head>
         <Script
-          src="https://hm.baidu.com/hm.js?fb4851a0837db710035e1b9f3f226f2a"
+          id="baidu-analytics"
           strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: baiduAnalytics }}
         />
       </head>
       <body className={inter.className}>{children}</body>
