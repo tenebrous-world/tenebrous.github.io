@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, ChevronRight, Stars } from "lucide-react";
+import { ChevronRight, Stars } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -57,10 +57,14 @@ export default function HomePage() {
               <h1 className="text-2xl font-bold">黑域游戏工作室</h1>
             </div>
             <div className="space-x-4">
-              <Button variant="link">
-                <Mail className="ml-2 h-4 w-4" />
-                netufo@hotmail.com
-              </Button>
+              <Link href="https://weibo.com/tenebrousworld" target="_blank" rel="noopener noreferrer">
+                <Button variant="link">
+                  <svg viewBox="0 0 24 24" className="ml-2 h-4 w-4" fill="currentColor">
+                    <path d="M20.194 14.197c-.285-.341-.64-.618-1.067-.83-.426-.213-.885-.367-1.376-.463-.492-.096-.847-.192-1.067-.288-.219-.096-.329-.208-.329-.336 0-.128.11-.271.329-.432.219-.16.47-.368.752-.624.285-.256.522-.592.714-1.008.191-.416.286-.927.286-1.536 0-.544-.11-1.024-.33-1.44-.219-.416-.505-.752-.857-1.008-.354-.256-.742-.432-1.163-.528-.423-.096-.83-.144-1.219-.144h-1.125v-2.4h-2.25v2.4h-1.125c-.39 0-.795.048-1.219.144-.422.096-.809.272-1.163.528-.353.256-.638.592-.857 1.008-.219.416-.329.896-.329 1.44 0 .608.095 1.12.286 1.536.19.416.428.752.714 1.008.285.256.533.464.752.624.219.16.329.304.329.432 0 .128-.11.24-.329.336-.219.096-.575.192-1.067.288-.492.096-.95.25-1.376.463-.427.213-.782.49-1.067.83-.285.341-.428.747-.428 1.216 0 .416.11.784.329 1.104.219.32.505.592.857.816.354.224.742.4 1.163.528.422.128.83.192 1.219.192h9v-1.2h-1.125c-.39 0-.795-.064-1.219-.192-.422-.128-.809-.304-1.163-.528-.353-.224-.638-.496-.857-.816-.219-.32-.329-.688-.329-1.104 0-.47.143-.875.428-1.216z"/>
+                  </svg>
+                  微博
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -176,6 +180,46 @@ export default function HomePage() {
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gray-800 max-w-4xl mx-auto overflow-hidden mt-8">
+          <CardContent className="p-8 flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-6 md:mb-0 md:mr-8">
+              <Image
+                src="/images/coming-soon.png"
+                alt="代号：弗罗里达 预告图"
+                width={400}
+                height={300}
+                className="rounded-lg shadow-md filter brightness-75"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <div className="flex items-center gap-4 mb-4">
+                <h4 className="text-3xl font-bold animate-fade-in-right">
+                  代号：弗罗里达
+                </h4>
+                <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold animate-pulse">
+                  Coming Soon
+                </span>
+              </div>
+              <p className="text-xl mb-6 animate-fade-in-right animation-delay-300">
+                一款充满神秘色彩的RPG游戏，带你探索未知的冒险世界。
+              </p>
+              <ul className="list-disc list-inside space-y-2 mb-6 animate-fade-in-right animation-delay-600">
+                <li>独特的世界观设定</li>
+                <li>创新的游戏玩法</li>
+                <li>精心打造的剧情体验</li>
+                <li>令人惊叹的视觉效果</li>
+              </ul>
+              <Button 
+                size="lg" 
+                className="bg-gray-600 text-white font-bold rounded-full px-8 cursor-not-allowed opacity-75"
+                disabled
+              >
+                敬请期待
+              </Button>
             </div>
           </CardContent>
         </Card>
