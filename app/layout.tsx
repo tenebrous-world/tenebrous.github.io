@@ -16,8 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
+      <head>
+        <script src="https://hm.baidu.com/hm.js?fb4851a0837db710035e1b9f3f226f2a"></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
-
